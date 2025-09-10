@@ -20,6 +20,15 @@ dependencies = [
 warp-server = "server:main"
 warp-test = "main:main"
 
+# 添加这个部分来明确指定包
+[tool.setuptools.packages.find]
+include = ["protobuf2openai*", "warp2protobuf*"]
+exclude = ["proto*"]
+
+# 或者如果你想包含所有三个目录，使用：
+# [tool.setuptools.packages.find]
+# include = ["proto*", "protobuf2openai*", "warp2protobuf*"]
+
 [[tool.uv.index]]
 url = "https://mirrors.ustc.edu.cn/pypi/simple"
 default = true
