@@ -3,7 +3,7 @@ name = "warptestui"
 version = "0.1.0"
 description = "Test UI for Warp"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "fastapi[standard]",
     "uvicorn[standard]",
