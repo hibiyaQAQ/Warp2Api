@@ -521,10 +521,12 @@ def main():
     
     # 启动服务器
     try:
+        # 从环境变量获取端口配置，默认8000
+        port = int(os.getenv("SERVER_PORT", "8000"))
         uvicorn.run(
             app,
-            host="0.0.0.0",
-            port=8000,
+            host="0.0.0.0",  # 允许外部访问
+            port=port,
             log_level="info",
             access_log=True
         )
